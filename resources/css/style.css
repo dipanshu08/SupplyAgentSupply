@@ -72,6 +72,10 @@ li {
   color: white;
 }
 
+.small-screen-nav {
+  display: none;
+}
+
 #gallery {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -123,4 +127,80 @@ footer {
   display: flex;
   height: 5rem;
   align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .small-screen-nav {
+    background-color: firebrick;
+    display: block;
+  }
+
+  .small-screen-nav p {
+    text-align: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: white;
+  }
+
+  #third-item {
+    display: none;
+  }
+
+  .item {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .heading {
+    height: 15rem;
+  }
+
+  .heading-item {
+    margin-top: 10rem;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  .heading-item h2 {
+    font-size: 0.77rem;
+  }
+
+  .heading-item h1 {
+    font-size: 1rem;
+  }
+
+  #second-item {
+    display: none;
+  }
+
+  .item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #contact {
+    flex-direction: column;
+    justify-content: flex-left;
+    margin: 0 auto;
+  }
+
+  #contact .location,
+  #contact .hours {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
